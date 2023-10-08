@@ -141,10 +141,19 @@ input{
 /* --------------------------------------------------------------------------------------------- */
 /* FOOTER que ocupa el 30% del navegador*/
 footer{
-    /* padding-top: 30px; */
     background-color: #040d12;
+    border: 1px solid transparent;
 }
 
+
+.line{
+    border-bottom: 1px solid #93B1A6;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
 
 /* repetimos 3 columnas de 1fr(33%) */ 
 /* y 3 filas  */
@@ -181,6 +190,7 @@ footer{
     color: #93B1A6;
     grid-column-start: 1;
     grid-column-end: 4;
+    margin-top: 10px;
 }
 
 
