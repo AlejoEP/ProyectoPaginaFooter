@@ -10,7 +10,7 @@ body{
 
 /* Esto es para que cada elemento de la lista quede una al lado de la otra */
 ul{
-    display: flex;       
+    display: flex;
 }
 
 /* con list-style-type: none eliminamos los puntos que les agrega por defecto*/
@@ -25,13 +25,13 @@ a{
     border-radius: 4px;
     text-decoration: none;
     color: #93B1A6;
-    cursor:pointer;    
+    cursor:pointer;
     transition: 1s;
 }
 
 /* le damos sombreado al texto que contiene la etiqueta a */
-a:hover{    
-    text-shadow:0 0 5px #00fff7;  
+a:hover{
+    text-shadow:0 0 5px #00fff7;
     color: #00fff7;
     /* traslada el contenido de a 20px en el eje X y 10px en el eje Y */
     /* transform: translate(20px, 10px);   */
@@ -43,8 +43,8 @@ nav{
     display: flex;
     justify-content: space-between;
     background-color: #040d12;
-    align-items: center;    
-    height: 15vh;  
+    align-items: center;
+    height: 15vh;
 }
 
 /* logo que ocupa ancho del 25% y alto del 45% del nav */
@@ -53,8 +53,8 @@ nav{
     height: 45%;
     margin-left: 20px;
     border-radius: 3px;
-    cursor:pointer;    
-    transition: 1s; 
+    cursor:pointer;
+    transition: 1s;
 }
 
 #logo:hover{
@@ -70,36 +70,11 @@ input{
     height: 3vh;
 }
 
-
-#cone1{    
-    border: none;
-    width: 18rem;
-    height: 21rem;
-    transition: 2.5s;
-}
-
-/* 
-#cone1:hover{
-    transform: rotate3d(2, 0, -1, 360deg);
-}
-
-#cone2{    
-    border: none;
-    width: 18rem;
-    height: 21rem;
-    transition: 2.5s;
-}
-
-#cone2:hover{
-    transform:scale3d(1,0.5,2);    
-}
- */
-
  /* ancho del 65% de la pantalla, margen arriba y abajo de 20px */
  /* auto fit es para que se adapte al tamaño del navegador */
 /* minmax(n) cuan grande o chico queres que sea la imagen */
 
- .grid-container-main{   
+ .grid-container-main{
     width: 65%;
     margin: 20px auto;
     display: grid;
@@ -108,35 +83,53 @@ input{
     grid-template-columns: repeat(4, 1fr);
     /* grid-template-rows: 300px 300px; */
     gap: 20px;
-
  }
- .card img {
+
+ .card{
     position: relative;
-    width: 230px;
-    height: 288px;
-    z-index: 1;    
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
     transition: all 1s;
-    border-radius: 6px;
-    box-shadow: 2px 2px 2px black;
-}
+    box-shadow: 2px 2px 4px black;
+ }
 
-.card img:hover{
-    opacity: 0.5;
-    scale: 1.1;
-}
+ .card:hover{
+    transform: scale(1.1);
+    opacity: 0.4;
+ }
 
-.black {
+ .black{
     position: absolute;
-    background-color: transparent;
-    width: 230px;
-    height: 288px;
-    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: scale(1);
+    cursor: pointer;
     transition: all 1s;
-}
+    color: transparent;
+    justify-content: center;
+ }
 
-.black:hover{
-    scale: 1.1;
-}
+ .black p{
+    text-align: center;
+ }
+
+ .black:hover {
+    color: white;
+ }
+
+ /* nos aseguramos que se ajuste a su contenedor */
+ .imagen{
+    width: 100%;
+    height: 100%;
+ }
+
+ .imagen img{
+    width: 100%;
+    height: 100%;
+ }
+
 
 /* --------------------------------------------------------------------------------------------- */
 /* FOOTER que ocupa el 30% del navegador*/
@@ -155,18 +148,19 @@ footer{
     margin-bottom: 10px;
 }
 
-/* repetimos 3 columnas de 1fr(33%) */ 
+/* repetimos 3 columnas de 1fr(33%) */
 /* y 3 filas  */
 .grid-container-footer{
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 3fr 1fr;
+    /* grid-template-rows: 1fr 3fr 1fr; */
+    grid-template-rows: repeat(3, auto);
     justify-items: center;
     align-items: center;
     padding: 15px;
 }
 
-.grid-items ul{    
+.grid-items ul{
     display: inline-block;
 }
 
@@ -210,7 +204,7 @@ footer{
 
 .flex-text{
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     margin: 20px;
     align-items: center;
 }
@@ -228,10 +222,16 @@ main h1{
 }
 
 
-@media (max-width: 600px) {
-   .grid-container{
-    grid-template-columns: repeat(1,1fr);
+/* tablet */
+ @media (max-width: 768px) {
+   .grid-container-main{
+    grid-template-columns: repeat(2,1fr);
    }
 }
 
-    
+/* celular */
+@media (max-width: 640px) {
+    .grid-container-main{
+        grid-template-columns: repeat(1,1fr);
+}
+  }
