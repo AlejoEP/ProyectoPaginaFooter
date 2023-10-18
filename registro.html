@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="validacion.js" ></script>
 </head>
 <body>
 
@@ -31,16 +32,18 @@
         <div class="caja-registro">
             
 
-            <form action="">
+            <form onsubmit="return validar()">
                 <h1 id="title-registro">Registro</h1>
                 <div class="label-input">
                     <label for="">Correo electrónico</label>
                     <input type="email" name="mail" id="mail" placeholder=" ejemplo@gmail.com">
+                    <div id="validar_mail">&nbsp;</div>
                 </div>                
 
                 <div class="label-input">
                     <label for="">Contraseña</label>
                     <input type="password" name="pass" id="pass" placeholder=" ingrese su contraseña">
+                    <div id="validar_pass">&nbsp;</div>
                 </div>
 
                 <input id="boton" type="submit" value="Enviar">
