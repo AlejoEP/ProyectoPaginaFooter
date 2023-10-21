@@ -1,0 +1,66 @@
+/* FOOTER que ocupa el 30% del navegador*/
+footer{
+    background-color: #040d12;
+    border: 1px solid transparent;
+}
+
+
+.line{
+    border-bottom: 1px solid #93B1A6;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+/* repetimos 3 columnas de 1fr(33%) */
+/* y 3 filas  */
+.grid-container-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1fr 3fr 1fr; */
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.grid-items ul{
+    display: inline-block;
+}
+
+.grid-items li{
+    margin: 5px;
+}
+
+.grid-ancla img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.grid-ancla img:hover{
+    transform:translate(0px, -10px);
+}
+
+/* que el texto ocupe el ancho de todas las columnas */
+.grid-text{
+    color: #93B1A6;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 10px;
+}
+
+
+/* espacio entre los iconos */
+.grid-icon{
+    display: inline-block;
+    margin: 10px;
+
+}
+
+.titulos{
+    color: #93B1A6;
+}

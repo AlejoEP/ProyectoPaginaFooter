@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(45deg, #040d12, #183d3d, #5C8374);
+}
+
+/* Esto es para que cada elemento de la lista quede una al lado de la otra */
+ul{
+    display: flex;
+}
+
+/* con list-style-type: none eliminamos los puntos que les agrega por defecto*/
+li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+/* Contenido de la etiqueta a (hipervinculos) */
+a{
+    display: flex;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #93B1A6;
+    cursor:pointer;
+    transition: 1s;
+}
+
+/* le damos sombreado al texto que contiene la etiqueta a */
+a:hover{
+    text-shadow:0 0 5px #00fff7;
+    color: #00fff7;
+    /* traslada el contenido de a 20px en el eje X y 10px en el eje Y */
+    /* transform: translate(20px, 10px);   */
+    /* transform:rotate(360deg); */
+}
+
+/* contenido flexbox, espaciado y centrado entre los elementos. que el nav ocupe el 15% */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #040d12;
+    align-items: center;
+    height: 15vh;
+}
+
+/* logo que ocupa ancho del 25% y alto del 45% del nav */
+#logo{
+    width: 25%;
+    height: 45%;
+    margin-left: 20px;
+    border-radius: 3px;
+    cursor:pointer;
+    transition: 1s;
+    border-radius: 25px;
+}
+
+#logo:hover{
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 20px #00fff7;
+}
+
+#logo{animation:rotate-horizontal-center 0.4s} @keyframes rotate-horizontal-center{0%{transform:rotateX(0)}100%{transform:rotateX(-360deg)}}
+
+input{
+    border-radius: 10px;
+    font-family:cursive;
+    background-color: #183d3d;
+    width: 20vw;
+    height: 3vh;
+}
