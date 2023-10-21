@@ -63,6 +63,8 @@ nav{
     box-shadow: 0 0 20px #00fff7;
 }
 
+#logo{animation:rotate-horizontal-center 0.4s} @keyframes rotate-horizontal-center{0%{transform:rotateX(0)}100%{transform:rotateX(-360deg)}}
+
 input{
     border-radius: 10px;
     font-family:cursive;
